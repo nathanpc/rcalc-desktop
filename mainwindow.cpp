@@ -38,21 +38,6 @@ void MainWindow::set_result(const QString &result_str) {
 }
 
 void MainWindow::set_band(int index, const QString &color) {
-    /*// Create a copy.
-    vector<const char*> tmp_bands;
-    for (size_t i = 0; i < bands.size(); ++i) {
-        if (i != index) {
-            tmp_bands.push_back(bands[i]);
-        } else {
-            tmp_bands.push_back(color.toLower().toStdString().c_str());
-        }
-    }
-
-    // Repopulate.
-    bands.clear();
-    for (size_t i = 0; i < tmp_bands.size(); ++i) {
-        bands.push_back(tmp_bands[i]);
-    }*/
     bands[index] = color.toLower();
 
     cout << bands[index].toStdString() << endl;
