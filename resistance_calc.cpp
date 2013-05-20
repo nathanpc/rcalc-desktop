@@ -91,13 +91,12 @@ void ResistanceCalc::populate_vector() {
  * @param bands Band name colors.
  * @return Resistance.
  */
-int ResistanceCalc::calculate(vector<const char*> bands) {
+int ResistanceCalc::calculate(vector<QString> bands) {
     QString res;
     int result = 0;
 
     for (size_t i = 0; i < bands.size() - 1; ++i) {
-        band _band = get_band(bands[i]);
-        cout << _band.band << endl;
+        band _band = get_band(bands[i].toStdString().c_str());
 
         // Check if it's the last band (multiplier).
         if (i == bands.size() - 2) {
