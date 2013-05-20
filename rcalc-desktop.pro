@@ -13,10 +13,12 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    resistance_calc.cpp
+           mainwindow.cpp \
+           resistance_calc.cpp
 
-HEADERS  += mainwindow.h \
-    resistance_calc.h
+HEADERS += mainwindow.h \
+           resistance_calc.h
 
-FORMS    += mainwindow.ui
+FORMS += mainwindow.ui
+
+ICON = icon.icns
