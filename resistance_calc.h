@@ -28,7 +28,7 @@ class ResistanceCalc {
         ResistanceCalc();
 
         int calculate(std::vector<QString> bands);
-        QString pretty_print(int value, const char *color, bool use_symbol = true);
+        QString pretty_print(int _value, const char *color, bool use_symbol = true);
 
         band get_band(const char *name);
 };

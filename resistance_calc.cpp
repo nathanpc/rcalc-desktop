@@ -115,13 +115,14 @@ int ResistanceCalc::calculate(vector<QString> bands) {
 /**
  * Pretty-print a resistance value.
  *
- * @param value Resistance value.
+ * @param _value Resistance value.
  * @param color Band color.
  * @param use_symbol Use the ohms symbol?
  * @return Pretty-printed value.
  */
-QString ResistanceCalc::pretty_print(int value, const char *color, bool use_symbol) {
+QString ResistanceCalc::pretty_print(int _value, const char *color, bool use_symbol) {
     QString result;
+    float value = _value;
 
     if (value >= 1000000) {
         result = QString::number(value / 1000000) + "M";
