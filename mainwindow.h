@@ -2,21 +2,33 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QComboBox>
+#include <QLabel>
+#include <QString>
 
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
-    
-public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
-    
-private:
-    Ui::MainWindow *ui;
+
+    private:
+        Ui::MainWindow *ui;
+
+        QComboBox *first_band;
+        QComboBox *second_band;
+        QComboBox *multiplier;
+        QComboBox *tolerance;
+        QLabel *result;
+
+    public:
+        explicit MainWindow(QWidget *parent = 0);
+        ~MainWindow();
+
+        void set_result(const QString &result_str);
+private slots:
+        void on_cmbBand1_currentTextChanged(const QString &arg1);
 };
 
 #endif // MAINWINDOW_H
