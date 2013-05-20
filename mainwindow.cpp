@@ -10,6 +10,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     multiplier = ui->cmbMultiplier;
     tolerance = ui->cmbTolerance;
     result = ui->lblResult;
+
+    result->setText(QString(calc.values[0].name) + " " + calc.values[1].name);
 }
 
 MainWindow::~MainWindow() {

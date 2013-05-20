@@ -6,6 +6,8 @@
 #include <QLabel>
 #include <QString>
 
+#include "resistance_calc.h"
+
 namespace Ui {
     class MainWindow;
 }
@@ -21,6 +23,8 @@ class MainWindow : public QMainWindow {
         QComboBox *multiplier;
         QComboBox *tolerance;
         QLabel *result;
+
+        ResistanceCalc calc;
 
     public:
         explicit MainWindow(QWidget *parent = 0);
